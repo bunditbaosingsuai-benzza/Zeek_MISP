@@ -20,7 +20,7 @@ var ctx = context.Background()
 func main() {
 	err := godotenv.Load()
 	if err != nil {
-		fmt.Println("ไม่พบไฟล์ .env หรือโหลดไม่สำเร็จ:", err)
+		fmt.Println(".env file not found or failed to load:", err)
 	}
 
 	mispURL := os.Getenv("MISP_URL")
@@ -90,7 +90,7 @@ func isDangerousType(t string) bool {
 func appendToLogFile(path string, log string) {
 	f, err := os.OpenFile(path, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	if err != nil {
-		fmt.Println("# เขียน log ไม่ได้:", err)
+		fmt.Println("# Unable to log :", err)
 		return
 	}
 	defer f.Close()
