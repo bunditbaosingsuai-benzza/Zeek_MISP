@@ -39,7 +39,7 @@ docker build -t misp-log-app .
 docker run -d \
   --name misp-container \
   --network host \
-  -v "$HOME/Desktop/alert.log:/alert.log" \
+  -v "$HOME/path/alert.log:/alert.log" \
   -v /etc/localtime:/etc/localtime:ro \
   -v $(pwd)/.env:/app/.env \
   misp-log-app
