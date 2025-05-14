@@ -35,7 +35,9 @@ This project integrates **Zeek**, **MISP**, **Fluent Bit**, **Go**, **Redis**, a
 
 ```bash
 creat to /path/to/alert.log
+
 docker build -t < name images > .
+
 docker run -d \
   --name < name container > \
   --network host \
