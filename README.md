@@ -34,12 +34,12 @@ This project integrates **Zeek**, **MISP**, **Fluent Bit**, **Go**, **Redis**, a
 ## 🐳 Docker Instructions
 
 ```bash
-creat to path/to/alert.log
-docker build -t misp-log-app .
+creat to /path/to/alert.log
+docker build -t < name images > .
 docker run -d \
-  --name misp-container \
+  --name < name container > \
   --network host \
   -v "$HOME/path/alert.log:/alert.log" \
   -v /etc/localtime:/etc/localtime:ro \
   -v $(pwd)/.env:/app/.env \
-  misp-log-app
+  < name images > 
