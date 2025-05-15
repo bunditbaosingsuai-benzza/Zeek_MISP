@@ -6,7 +6,7 @@ This project is designed to receive log data from **Zeek**, a tool used for netw
 
 ---
 
-## The main components:
+## 🔌 The main components:
 
 **Zeek**: Zeek acts as a tool for detecting and logging network traffic activities. It helps the system identify potential threats from incoming data, such as external attacks, unauthorized data access, or the use of prohibited protocols.
 
@@ -36,7 +36,7 @@ MISP_API_KEY=your_misp_api_key
 ```bash
 touch /Desktop/alert.log
 ```
-## 🐳Build docker 
+## 🐳 Build docker 
 ```bash
 docker build -t < name images > .
 ```
