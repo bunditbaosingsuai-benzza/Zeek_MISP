@@ -10,7 +10,7 @@ This project is designed to receive log data from **Zeek**, a tool used for netw
 
 * **Zeek**: Zeek acts as a tool for detecting and logging network traffic activities. It helps the system identify potential threats from incoming data, such as external attacks, unauthorized data access, or the use of prohibited protocols.
 
-* **MISP** (Malware Information Sharing Platform)*: MISP is used to store and share Indicators of Compromise (IOCs) that are used to detect various threats. The system pulls IOC data from MISP to compare it against the logs received from Zeek.
+* **MISP (Malware Information Sharing Platform)**: MISP is used to store and share Indicators of Compromise (IOCs) that are used to detect various threats. The system pulls IOC data from MISP to compare it against the logs received from Zeek.
 
 * **Redis**: Redis is used for data caching to improve processing efficiency. By storing frequently accessed data in memory, Redis allows faster access, improving the performance of data processing and comparison.
 
