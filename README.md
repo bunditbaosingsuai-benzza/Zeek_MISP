@@ -8,25 +8,25 @@ This project is designed to receive log data from **Zeek**, a tool used for netw
 
 ## 🔌 The main components:
 
--**Zeek**: Zeek acts as a tool for detecting and logging network traffic activities. It helps the system identify potential threats from incoming data, such as external attacks, unauthorized data access, or the use of prohibited protocols.
+* **Zeek**: Zeek acts as a tool for detecting and logging network traffic activities. It helps the system identify potential threats from incoming data, such as external attacks, unauthorized data access, or the use of prohibited protocols.
 
--**MISP** (Malware Information Sharing Platform)*: MISP is used to store and share Indicators of Compromise (IOCs) that are used to detect various threats. The system pulls IOC data from MISP to compare it against the logs received from Zeek.
+* **MISP** (Malware Information Sharing Platform)*: MISP is used to store and share Indicators of Compromise (IOCs) that are used to detect various threats. The system pulls IOC data from MISP to compare it against the logs received from Zeek.
 
--**Redis**: Redis is used for data caching to improve processing efficiency. By storing frequently accessed data in memory, Redis allows faster access, improving the performance of data processing and comparison.
+* **Redis**: Redis is used for data caching to improve processing efficiency. By storing frequently accessed data in memory, Redis allows faster access, improving the performance of data processing and comparison.
 
--**Fluent Bit**: Fluent Bit is an efficient log management and forwarding tool. It is used to collect logs from Zeek and forward them to other systems like Redis or OpenSearch. Fluent Bit facilitates data extraction from multiple sources (Multiple Inputs) and handles tasks such as filtering or transforming the data for further processing. Additionally, Fluent Bit works with Zeek and Redis to send matched IOC data to OpenSearch quickly and efficiently.
+* **Fluent Bit**: Fluent Bit is an efficient log management and forwarding tool. It is used to collect logs from Zeek and forward them to other systems like Redis or OpenSearch. Fluent Bit facilitates data extraction from multiple sources (Multiple Inputs) and handles tasks such as filtering or transforming the data for further processing. Additionally, Fluent Bit works with Zeek and Redis to send matched IOC data to OpenSearch quickly and efficiently.
 
--**Go**: Go is the programming language used to develop this project due to its fast processing capabilities and support for concurrent operations. Go is well-suited for systems that handle large volumes of data and require real-time processing.
+* **Go**: Go is the programming language used to develop this project due to its fast processing capabilities and support for concurrent operations. Go is well-suited for systems that handle large volumes of data and require real-time processing.
 
--**Docker**: The system operates within Docker containers, which helps isolate the project from the underlying operating system. This allows for easier configuration and management of different environments, ensuring standardized execution for testing and development purposes.
+* **Docker**: The system operates within Docker containers, which helps isolate the project from the underlying operating system. This allows for easier configuration and management of different environments, ensuring standardized execution for testing and development purposes.
 
--**OpenSearch**: OpenSearch is used to store and visualize threat-related data detected by the system. It provides the ability to analyze and visualize the data, such as displaying graphs or querying stored data from the database.
+* **OpenSearch**: OpenSearch is used to store and visualize threat-related data detected by the system. It provides the ability to analyze and visualize the data, such as displaying graphs or querying stored data from the database.
 
 ---
 
 ## ⚙️ Getting Started
 
-### 1.  Create .env File and Alert.log 
+### 1.  Create ``.env`` File and ``Alert.log`` 
 
 In the root directory of the project, create a file named .env with the following content:
 ```bash
