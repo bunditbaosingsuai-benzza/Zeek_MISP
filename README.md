@@ -45,5 +45,7 @@ docker run -d \
   -v "$HOME/Desktop/alert.log:/alert.log" \
   -v /etc/localtime:/etc/localtime:ro \
   -v $(pwd)/.env:/app/.env \
-  < name images > 
+  < name images >
+
+
 
