@@ -1,40 +1,41 @@
-# Zeek + MISP Threat Detection System
+# Zeek-MISP Threat Detection System
 
-##  Project Overview
-
-This project integrates **Zeek**, **MISP**, **Fluent Bit**, **Go**, **Redis**, and **OpenSearch** to create a lightweight threat detection pipeline. It monitors network logs, compares them with threat intelligence (MISP), and visualizes the results via OpenSearch Dashboards.
+This project is designed to receive logs from **Zeek**, compare them against **MISP** IOCs (Indicators of Compromise), and send matched threat data to **OpenSearch** for visualization. The system is built with **Go**, runs inside a **Docker container**, and uses **Redis** for data caching.
 
 ---
 
-## 🔧 How It Works
+## 📁 System Architecture
 
-1. **Zeek** captures network traffic and generates security logs.
-2. **Fluent Bit** forwards Zeek logs via **TCP port 5050** to a **Go application**.
-3. The **Go application**:
-   - Periodically fetches MISP threat data every 5 minutes.
-   - Stores and updates IOC (IP, domain, URL, hash...) in **Redis**.
-   - Compares incoming logs with MISP data.
-   - If a match is found, the system:
-     - Displays an alert in the console.
-     - Sends the alert to **OpenSearch** for indexing and dashboard visualization.
-4. Everything is containerized using **Docker** for portability.
+- **Zeek** generates network security logs.
+- **Fluent Bit** sends logs over **TCP port 5050** to a **Go application**.
+- The Go app:
+  - Fetches MISP IOCs every 5 minutes.
+  - Stores new IOCs in **Redis** (avoiding duplicates).
+  - Compares incoming logs against IOC values.
+  - If matched:
+    - Displays alerts in the console.
+    - Writes alerts to a local file `alert.log`.
+    - Sends alerts to **OpenSearch** for dashboard analytics.
 
----
-
-##  Features
-
--  Real-time detection of malicious indicators in Zeek logs.
--  IOC comparison using MISP threat intelligence.
--  No duplicate API fetching — only new IOC data is pulled.
--  Dashboard-ready logs for OpenSearch.
--  Containerized Go app with support for `.env` configuration.
+Everything is containerized via **Docker** for portability and consistency.
 
 ---
 
-## 🐳 Docker Instructions
+## ⚙️ Getting Started
+
+### 1.  Create `.env` File
+
+In the root directory of the project, create a file named `.env` with the following content:
+
+.env
+MISP_URL=https://<your-misp-ip>/attributes/restSearch.json
+MISP_API_KEY=your_misp_api_key
+
+creat to /path/to/alert.log
+
+##  Docker Instructions
 
 ```bash
-creat to /path/to/alert.log
 
 docker build -t < name images > .
 
@@ -45,3 +46,4 @@ docker run -d \
   -v /etc/localtime:/etc/localtime:ro \
   -v $(pwd)/.env:/app/.env \
   < name images > 
+
