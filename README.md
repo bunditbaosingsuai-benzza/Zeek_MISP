@@ -23,7 +23,7 @@ Everything is containerized via **Docker** for portability and consistency.
 
 ## ⚙️ Getting Started
 
-### 1.  Create `.env` File
+### 1.  Create `.env` File and 
 
 In the root directory of the project, create a file named `.env` with the following content:
 
@@ -31,9 +31,9 @@ In the root directory of the project, create a file named `.env` with the follow
 MISP_URL=https://<your-misp-ip>/attributes/restSearch.json
 MISP_API_KEY=your_misp_api_key
 
-creat to /path/to/alert.log
+creat to /Desktop/alert.log
 
-##  Docker Instructions
+##  Build docker
 
 ```bash
 
@@ -42,7 +42,7 @@ docker build -t < name images > .
 docker run -d \
   --name < name container > \
   --network host \
-  -v "$HOME/path/alert.log:/alert.log" \
+  -v "$HOME/Desktop/alert.log:/alert.log" \
   -v /etc/localtime:/etc/localtime:ro \
   -v $(pwd)/.env:/app/.env \
   < name images > 
