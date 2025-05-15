@@ -46,6 +46,6 @@ docker run -d \
   -v /etc/localtime:/etc/localtime:ro \
   -v $(pwd)/.env:/app/.env \
   < name images >
-
+```
 
 
