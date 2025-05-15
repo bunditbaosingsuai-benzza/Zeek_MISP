@@ -4,7 +4,7 @@ This project is designed to receive logs from **Zeek**, compare them against **M
 
 ---
 
-## 📁 System Architecture
+## System Architecture
 
 - **Zeek** generates network security logs.
 - **Fluent Bit** sends logs over **TCP port 5050** to a **Go application**.
