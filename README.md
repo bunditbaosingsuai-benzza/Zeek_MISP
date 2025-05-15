@@ -28,11 +28,13 @@ Everything is containerized via **Docker** for portability and consistency.
 In the root directory of the project, create a file named `.env` with the following content:
 
 .env
+```bash
 MISP_URL=https://<your-misp-ip>/attributes/restSearch.json
 MISP_API_KEY=your_misp_api_key
-
-creat to /Desktop/alert.log
-
+```
+```bash
+touch /Desktop/alert.log
+```
 ##  Build docker
 
 ```bash
