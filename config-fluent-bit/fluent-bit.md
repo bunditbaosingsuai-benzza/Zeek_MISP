@@ -2,9 +2,9 @@
 https://docs.fluentbit.io/manual/installation/linux/ubuntu
 ---------------------
 # Configuration Fluent-bit
-The default configuration file is written to:
+The default configuration file is written to: `/etc/fluent-bit/fluent-bit.conf`
 ```bash
-/etc/fluent-bit/fluent-bit.conf
+nano /etc/fluent-bit/fluent-bit.conf
 ```
 ```bash
 [INPUT]
