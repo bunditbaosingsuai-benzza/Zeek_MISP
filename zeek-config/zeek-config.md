@@ -2,7 +2,7 @@
 https://docs.zeek.org/en/current/install.html
 -----------
 # Configuration zeek. 
-default configuration file is located at /opt/zeek/etc/networks.cfg. You can edit it using the nano editor.
+default configuration file is located at `/opt/zeek/etc/networks.cfg` You can edit it using the nano editor.
 ```bash
 nano /opt/zeek/etc/networks.cfg
 ```
@@ -10,7 +10,7 @@ Add your internal network as shown below:
 ```bash
 10.0.0.0/24
 ```
-edit the Zeek node.cfg configuration file.
+edit the Zeek `node.cfg` configuration file.
 ```bash
 nano /opt/zeek/etc/node.cfg
 ```
