@@ -7,7 +7,7 @@ This project is designed to receive log data from **Zeek**, a tool used for netw
 
 ---
 
-## 🔌 The main components:
+## The main components:
 
 * **Zeek**: Zeek acts as a tool for detecting and logging network traffic activities. It helps the system identify potential threats from incoming data, such as external attacks, unauthorized data access, or the use of prohibited protocols.
 
@@ -25,7 +25,7 @@ This project is designed to receive log data from **Zeek**, a tool used for netw
 
 ---
 
-## ⚙️ Getting Started
+##  Getting Started
 
 - [How to install and config Fluent-bit](docs/Config-fluent-bit.md)
 - [How to inatall and Config zeek](docs/Config-zeek.md)
@@ -42,7 +42,7 @@ Create a ``alert.log``  file in the Zeek-MISP folder.
 ```bash
 touch /Desktop/alert.log
 ```
-## 🐳 Build docker 
+## Build docker 
 ```bash
 docker build -t < name images > .
 ```
