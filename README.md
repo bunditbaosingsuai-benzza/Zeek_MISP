@@ -27,13 +27,18 @@ This project is designed to receive log data from **Zeek**, a tool used for netw
 
 ## ⚙️ Getting Started
 
-### 1.  Create ``.env`` File and ``Alert.log`` 
+- [How to install and config Fluent-bit](docs/Config-fluent-bit.md)
+- [How to inatall and Config zeek](docs/Config-zeek.md)
+- [How to install redis](docs/install-redis.md)
 
-In the root directory of the project, create a file named .env with the following content:
+###   Create ``.env`` File and ``alert.log`` 
+
+Create a ``.env`` file in the Zeek-MISP folder.
 ```bash
 MISP_URL=https://<your-misp-ip>/attributes/restSearch.json
 MISP_API_KEY=your_misp_api_key
 ```
+Create a ``alert.log``  file in the Zeek-MISP folder.
 ```bash
 touch /Desktop/alert.log
 ```
@@ -52,14 +57,6 @@ docker run -d \
 ```
 --------
 
-# ชื่อโปรเจกต์ของคุณ
 
-ยินดีต้อนรับสู่โปรเจกต์นี้!
-
-## เอกสารประกอบ
-
-- [Config fluent-bit](docs/Config-fluent-bit.md)
-- [Config zeek](docs/Config-zeek.md)
-- [How to install redis](docs/install-redis.md)
 
 
