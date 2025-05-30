@@ -20,17 +20,18 @@ This project is designed to receive log data from **Zeek**, a tool used for netw
 
 * **Docker**: The system operates within Docker containers, which helps isolate the project from the underlying operating system. This allows for easier configuration and management of different environments, ensuring standardized execution for testing and development purposes.
 
-* **OpenSearch**: OpenSearch is used to store and visualize threat-related data detected by the system. It provides the ability to analyze and visualize the data, such as displaying graphs or querying stored data from the database.
-
 ---
 
 ## Getting Started
 
-- [How to install and config Fluent-bit](docs/Config-fluent-bit.md)
-- [How to inatall and Config zeek](docs/Config-zeek.md)
-- [How to install redis](docs/install-redis.md)
+### Step 1 install these tools.
 
-###  Create ``.env`` File and ``alert.log`` 
+1. [ Install and config Fluent-bit](docs/Config-fluent-bit.md)
+2. [ Inatall and Config zeek](docs/Config-zeek.md)
+3. [ Install redis](docs/install-redis.md)
+4. [ Install MISP ](https://misp.github.io/MISP/xINSTALL.ubuntu2204.html)
+
+###  Step 2 Create ``.env`` File and ``alert.log`` 
 
 Create a ``.env`` file in the Zeek-MISP folder.
 ```bash
@@ -41,7 +42,7 @@ Create a ``alert.log``  file in the Zeek-MISP folder.
 ```bash
 touch /Desktop/alert.log
 ```
-## Build docker 
+### Step 3 Build docker.
 ```bash
 docker build -t < name images > .
 ```
