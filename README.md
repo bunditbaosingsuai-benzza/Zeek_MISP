@@ -29,7 +29,6 @@ This project is designed to receive log data from **Zeek**, a tool used for netw
 1. [ Install and config Fluent-bit](docs/Config-fluent-bit.md)
 2. [ Inatall and Config zeek](docs/Config-zeek.md)
 3. [ Install redis](docs/install-redis.md)
-4. [ Install MISP ](https://misp.github.io/MISP/xINSTALL.ubuntu2204.html)
 
 ###  Step 2 Create ``.env`` File and ``alert.log`` 
 
