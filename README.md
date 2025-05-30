@@ -1,5 +1,4 @@
-# zeek_misp
-# Zeek-MISP Threat Detection System
+# Zeek-MISP Threat Detection System.
 
 This project is designed to receive logs from **Zeek**, compare them against **MISP** IOCs (Indicators of Compromise), and send matched threat data to **OpenSearch** for visualization. The system is built with *Go*, runs inside a *Docker container*, and uses *Redis* for data caching.
 
@@ -7,7 +6,7 @@ This project is designed to receive log data from **Zeek**, a tool used for netw
 
 ---
 
-## The main components:
+## The main components.
 
 * **Zeek**: Zeek acts as a tool for detecting and logging network traffic activities. It helps the system identify potential threats from incoming data, such as external attacks, unauthorized data access, or the use of prohibited protocols.
 
@@ -25,13 +24,13 @@ This project is designed to receive log data from **Zeek**, a tool used for netw
 
 ---
 
-##  Getting Started
+## Getting Started
 
 - [How to install and config Fluent-bit](docs/Config-fluent-bit.md)
 - [How to inatall and Config zeek](docs/Config-zeek.md)
 - [How to install redis](docs/install-redis.md)
 
-###   Create ``.env`` File and ``alert.log`` 
+###  Create ``.env`` File and ``alert.log`` 
 
 Create a ``.env`` file in the Zeek-MISP folder.
 ```bash
