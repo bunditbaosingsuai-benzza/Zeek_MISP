@@ -6,6 +6,26 @@ This project is designed to receive log data from **Zeek**, a tool used for netw
 
 ---
 
+## Important: About MISP
+
+> **Note:** This system requires access to a working instance of **MISP**.
+
+- MISP (Malware Information Sharing Platform) is an open-source platform for sharing, storing, and correlating threat intelligence including indicators of compromise (IOCs), attack patterns, and vulnerabilities.
+- You need access to an **existing MISP instance** either hosted internally (recommended for organizations) or via a trusted external threat sharing network.
+- This project pulls IOC data from MISP using its **REST API**. You must configure the `.env` file with:
+  - The **MISP URL**: e.g., `https://your.misp.instance/attributes/restSearch.json`
+  - A **valid API key** with sufficient read access to fetch IOCs
+
+If you do not already have MISP, we recommend reviewing the following resources to set up or gain access:
+
+- [MISP Official Installation Guide](https://misp.github.io/MISP/)
+- [MISP User Guide](https://www.circl.lu/doc/misp/)
+- [MISP API Documentation](https://www.circl.lu/doc/misp/feed-misp/)
+
+>  For organizational use, it's highly recommended to host MISP internally to ensure data privacy and security.
+
+---
+
 ## The main components.
 
 * **Zeek**: Zeek acts as a tool for detecting and logging network traffic activities. It helps the system identify potential threats from incoming data, such as external attacks, unauthorized data access, or the use of prohibited protocols.
