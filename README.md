@@ -55,7 +55,3 @@ docker run -d \
   < name images >
 ```
 --------
-
-
-
-
