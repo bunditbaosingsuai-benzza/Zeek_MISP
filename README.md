@@ -5,8 +5,7 @@ This project is designed to receive logs from **Zeek**, compare them against **M
 This project is designed to receive log data from **Zeek**, a tool used for network monitoring and logging network events. The received logs are compared against Indicators of Compromise (IOCs) stored in **MISP (Malware Information Sharing Platform)** to identify "threats" or "potentially malicious events." When a match is found with the specified IOC, the system sends the detected threat data to **OpenSearch** for visualization and further analysis.
 
 
-![Alt text](Diagram.jpg)
-
+<img src="Diagram.jpg" alt="Zeek-MISP Threat Detection Diagram" width="600" height="400"/>
 
 ---
 
