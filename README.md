@@ -58,7 +58,7 @@ If you do not already have MISP, we recommend reviewing the following resources 
 Create a ``.env`` file in the Zeek-MISP folder.
 ```bash
 MISP_URL=https://<your-misp-ip>/attributes/restSearch.json
-MISP_API_KEY=your_misp_api_key
+MISP_API_KEY=<your_misp_api_key>
 ```
 Create a ``alert.log``  file in the Zeek-MISP folder.
 ```bash
