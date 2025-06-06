@@ -80,7 +80,7 @@ func checkLogAgainstRedis(rdb *redis.Client, log string) {
 
 func isDangerousType(t string) bool {
 	switch t {
-	case "ip", "ip-src", "ip-dst", "domain", "url", "link", "md5", "sha1", "sha256":
+	case "ip", "ip-src", "ip-dst", "domain", "url", "link", "md5", "sha1", "sha256", "host":
 		return true
 	default:
 		return false
